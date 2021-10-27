@@ -29,6 +29,7 @@ jobs:
   push-to-registry:
     env:
       PUBLIC_PATH: "/"
+      VUE_APP_MESSAGE: "Welcome to GITHUB ACTIONS Vue.js App"
       IMAGE_NAME: docker-exp
 
     name: Push Docker image to Docker Hub
