@@ -2,6 +2,9 @@
 
 FROM node:lts-alpine as build-stage
 
+ENV VUE_APP_MESSAGE="Welcome to Dockerfile Vue.js App"
+ENV PUBLIC_PATH="/"
+
 WORKDIR /app
 
 COPY package*.json ./
