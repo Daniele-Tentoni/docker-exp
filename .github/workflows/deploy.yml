@@ -11,9 +11,6 @@ on:
       tags:
         description: "Environment variables reloading"
 
-env:
-  IMAGE_NAME: docker-exp
-
 jobs:
   Deploy:
     runs-on: ubuntu-latest
@@ -28,12 +25,11 @@ jobs:
           token: ${{ secrets.PAGES_TOKEN }}
         env:
           PUBLIC_PATH: "/docker-exp/"
-          VUE_APP_SERVER_URL: ${{ secrets.VUE_APP_SERVER_URL }}
 
   push-to-registry:
     env:
       PUBLIC_PATH: "/"
-      VUE_APP_SERVER_URL: ${{ secrets.VUE_APP_SERVER_URL }}
+      IMAGE_NAME: docker-exp
 
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
