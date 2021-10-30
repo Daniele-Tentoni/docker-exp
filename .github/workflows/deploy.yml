@@ -24,6 +24,9 @@ jobs:
           reponame: "docker-exp"
           token: ${{ secrets.PAGES_TOKEN }}
           branch: "master"
+        env:
+          PUBLIC_PATH: "/"
+          VUE_APP_MESSAGE: "Welcome to GITHUB ACTIONS Vue.js App"
 
   push-to-registry:
     env:
