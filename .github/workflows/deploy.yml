@@ -23,8 +23,7 @@ jobs:
           username: "Daniele-Tentoni"
           reponame: "docker-exp"
           token: ${{ secrets.PAGES_TOKEN }}
-        env:
-          PUBLIC_PATH: "/docker-exp/"
+          branch: "master"
 
   push-to-registry:
     env:
